@@ -1,27 +1,13 @@
 # Card
+A web component with a card layout created using Angular Elements
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## WIP
+This project is just starting up. Only the scaffold for the Angular Element has been created so far. Please check back in the near future!!
 
 ## Build
+Package json has couple of build scripts to build the project. Use `npm run [scriptname]` to create a build. The names of the scripts are intentionally kept long to describe what their outputs looks like.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Run
+Globally install live server with the command `npm i live-server -g`. Then run this command from the root folder `npm run run`. It should display an HTML page on your default browser. The page contains the card component as an Angular Element.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
