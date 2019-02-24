@@ -42,3 +42,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Do not checkin scss files as they are dynamically generated during build
+*.scss
