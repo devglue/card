@@ -8,9 +8,14 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-with-main-polyfills-and-scripts": "ng build card --prod --output-hashing=none --single-bundle true --keep-polyfills",
-    "build-with-runtime-main-polyfills-styles-css-and-scripts": "ng build card --prod --output-hashing=none",
-    "run": "live-server ./dist/card"
+    "build-card-style": "theo ./design-specs/devglue-card.yml --format scss --dest ./design-specs/scss-output",
+    "build-styles": "npm run build-card-style",
+    "build-with-main-polyfills-and-scripts": "npm run build-styles && ng build card --prod --output-hashing=none --single-bundle true --keep-polyfills",
+    "build-with-runtime-main-polyfills-styles-css-and-scripts": "npm run build-styles && ng build card --prod --output-hashing=none",
+    "build-part": "npm run build-with-main-polyfills-and-scripts",
+    "build-all": "npm run build-with-runtime-main-polyfills-styles-css-and-scripts",
+    "run": "live-server ./dist/card",
+    "build-and-run": "npm run build-all && npm run run"
   },
   "private": false,
   "license": "MIT",
@@ -33,6 +38,7 @@
     "document-register-element": "^1.7.2",
     "ngx-build-plus": "^7.7.5",
     "rxjs": "~6.3.3",
+    "theo": "github:salesforce-ux/theo",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },
