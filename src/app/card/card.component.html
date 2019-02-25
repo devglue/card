@@ -1,3 +1,9 @@
-<p>
-  card works!
-</p>
+<div class="devglue-card">
+  <div class="title">
+    {{ title }}
+  </div>
+  <div class="image"><img *ngIf="src" [src]="src" [alt]="alt || ''" /></div>
+  <div class="description">
+    {{ description }}
+  </div>
+</div>

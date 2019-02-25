@@ -1,4 +1,6 @@
 # aliases.yml
 aliases:
   primary_color:
+    value: "#222020"
+  secondary_color:
     value: "#0070d2"

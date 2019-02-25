@@ -8,12 +8,14 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-app-style": "theo ./design-specs/styles.yml --format scss --dest ./src",
-    "build-card-style": "theo ./design-specs/card.component.yml --format scss --dest ./src/app/card",
-    "build-styles": "npm run build-app-style && npm run build-card-style",
+    "build-card-style": "theo ./design-specs/devglue-card.yml --format scss --dest ./design-specs/scss-output",
+    "build-styles": "npm run build-card-style",
     "build-with-main-polyfills-and-scripts": "npm run build-styles && ng build card --prod --output-hashing=none --single-bundle true --keep-polyfills",
     "build-with-runtime-main-polyfills-styles-css-and-scripts": "npm run build-styles && ng build card --prod --output-hashing=none",
-    "run": "live-server ./dist/card"
+    "build-part": "npm run build-with-main-polyfills-and-scripts",
+    "build-all": "npm run build-with-runtime-main-polyfills-styles-css-and-scripts",
+    "run": "live-server ./dist/card",
+    "build-and-run": "npm run build-all && npm run run"
   },
   "private": false,
   "license": "MIT",

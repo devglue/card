@@ -1,0 +1,12 @@
+# devglue-card.yml
+props:
+  devglue_card_title_color:
+    value: "{!primary_color}"
+
+  devglue_card_description_color:
+    value: "{!secondary_color}"
+imports:
+  - ./aliases.yml
+global:
+  type: color
+  category: card
